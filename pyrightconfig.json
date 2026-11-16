@@ -1,0 +1,8 @@
+{
+  "include": ["accounts", "professionals", "config", "manage.py"],
+  "exclude": [".venv", "staticfiles", "reports/coverage-html"],
+  "venvPath": ".",
+  "venv": ".venv",
+  "pythonVersion": "3.12",
+  "pythonPlatform": "Linux"
+}

@@ -1,0 +1,14 @@
+[tool.coverage.run]
+branch = true
+source = ["accounts", "professionals", "config"]
+omit = ["*/migrations/*", "*/apps.py", "manage.py"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+fail_under = 75
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "if __name__ == .__main__.:",
+]
