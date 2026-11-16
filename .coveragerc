@@ -1,0 +1,18 @@
+[run]
+branch = True
+source =
+    conecta_bairro
+    servicos
+omit =
+    */migrations/*
+    */tests/*
+    conecta_bairro/asgi.py
+    conecta_bairro/wsgi.py
+    manage.py
+
+[report]
+show_missing = True
+skip_empty = True
+
+[html]
+directory = htmlcov
