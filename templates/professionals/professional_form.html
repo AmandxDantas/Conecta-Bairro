@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}{% if editing %}Editar meu perfil{% else %}Cadastrar profissional{% endif %} — Conecta Bairro{% endblock %}
+{% block content %}
+<section class="page-intro form-intro"><div class="container"><a class="back-link" href="{% url 'professionals:home' %}">← Voltar ao início</a><p class="eyebrow eyebrow-blue">{% if editing %}Seu espaço profissional{% else %}Compartilhe seu trabalho{% endif %}</p><h1>{% if editing %}Atualize seu perfil{% else %}Cadastre seu serviço{% endif %}</h1><p>{% if editing %}Mantenha suas informações atualizadas para que moradores encontrem você.{% else %}Preencha seus dados. Moradores da região poderão conhecer seu trabalho e falar direto com você.{% endif %}</p></div></section>
+<section class="section form-section"><div class="container form-layout"><form method="post" class="surface-form" novalidate>{% csrf_token %}
+  {% if form.non_field_errors %}<div class="form-error-summary" role="alert">{{ form.non_field_errors }}</div>{% endif %}
+  <div class="form-section-heading"><span class="form-step">01</span><div><h2>Sobre você e seu serviço</h2><p>Campos com * são obrigatórios.</p></div></div>
+  {% for field in form %}<div class="field{% if field.errors %} field-invalid{% endif %}"><label for="{{ field.id_for_label }}">{{ field.label }} <span class="required-mark" aria-hidden="true">*</span></label>{{ field }}{% if field.help_text %}<small class="field-help" id="{{ field.id_for_label }}_help">{{ field.help_text }}</small>{% endif %}{% for error in field.errors %}<p class="field-error" role="alert">{{ error }}</p>{% endfor %}</div>{% endfor %}
+  <button type="submit" class="button button-primary button-block form-submit">{% if editing %}Salvar alterações{% else %}Publicar meu perfil{% endif %} <span aria-hidden="true">→</span></button>
+  <p class="privacy-note">Seus dados serão usados para exibir seu perfil e permitir contato pelo WhatsApp.</p>
+</form><aside class="form-aside"><div class="aside-icon"><span class="brand-mark-small">CB</span></div><h2>Seu trabalho faz a diferença no bairro.</h2><p>Conte com clareza que tipo de serviço oferece e onde atende. Isso ajuda moradores a encontrar a pessoa certa.</p><ul class="check-list"><li><span aria-hidden="true">✓</span> Cadastre apenas um número de WhatsApp válido</li><li><span aria-hidden="true">✓</span> Escreva uma descrição fácil de entender</li><li><span aria-hidden="true">✓</span> Seu perfil pode ser atualizado depois</li></ul></aside></div></section>
+{% endblock %}

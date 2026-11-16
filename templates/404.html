@@ -1,0 +1,3 @@
+{% extends 'base.html' %}
+{% block title %}Página não encontrada — Conecta Bairro{% endblock %}
+{% block content %}<section class="section"><div class="container empty-state"><p class="eyebrow eyebrow-blue">404</p><h1>Este caminho não existe.</h1><p>Volte ao início e procure um profissional perto de você.</p><a class="button button-primary" href="{% url 'professionals:home' %}">Ir para o início</a></div></section>{% endblock %}
