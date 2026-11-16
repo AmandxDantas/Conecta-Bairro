@@ -1,5 +1,7 @@
 # Conecta Bairro
 
+Projeto em desenvolvimento.
+
 Plataforma web que aproxima **moradores** e **profissionais autônomos** da mesma comunidade, facilitando a divulgação de serviços locais e a busca por prestadores próximos.
 
 > **Status do projeto:** MVP em fase de planejamento e prototipação (Projeto de Software – Experiência Prática , curso de Análise e Desenvolvimento de Sistemas).
