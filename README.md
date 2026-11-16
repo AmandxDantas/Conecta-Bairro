@@ -6,28 +6,6 @@ Plataforma web que aproxima **moradores** e **profissionais autônomos** da mesm
 
 ---
 
-## Sumário
-
-- [Sobre o projeto](#sobre-o-projeto)
-- [Problema e público-alvo](#problema-e-público-alvo)
-- [Funcionalidades do MVP](#funcionalidades-do-mvp)
-- [Fora do escopo inicial](#fora-do-escopo-inicial)
-- [Requisitos](#requisitos)
-- [Arquitetura](#arquitetura)
-- [Tecnologias](#tecnologias)
-- [Modelo de dados](#modelo-de-dados)
-- [Segurança](#segurança)
-- [Acessibilidade](#acessibilidade)
-- [Instalação e execução](#instalação-e-execução)
-- [Estrutura sugerida do projeto](#estrutura-sugerida-do-projeto)
-- [Testes e validação](#testes-e-validação)
-- [Soluções semelhantes e diferencial](#soluções-semelhantes-e-diferencial)
-- [Impacto social e ODS](#impacto-social-e-ods)
-- [Roadmap](#roadmap)
-- [Autoria](#autoria)
-
----
-
 ## Sobre o projeto
 
 O **Conecta Bairro** permite que profissionais autônomos (como motoboys, eletricistas, diaristas, pintores e jardineiros) cadastrem seus serviços e que moradores encontrem esses profissionais por **categoria** e **região**, entrando em contato direto pelo **WhatsApp**, sem intermediação, taxas ou etapas complexas de contratação.
