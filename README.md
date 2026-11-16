@@ -2,7 +2,7 @@
 
 Plataforma web que aproxima **moradores** e **profissionais autônomos** da mesma comunidade, facilitando a divulgação de serviços locais e a busca por prestadores próximos.
 
-> **Status do projeto:** MVP em fase de planejamento e prototipação (Projeto de Software – Experiência Prática 2, curso de Análise e Desenvolvimento de Sistemas).
+> **Status do projeto:** MVP em fase de planejamento e prototipação (Projeto de Software – Experiência Prática , curso de Análise e Desenvolvimento de Sistemas).
 
 ---
 
@@ -293,8 +293,8 @@ A contribuição é local: aumentar a visibilidade dos profissionais, sem garant
 ## Autoria
 
 **Amanda Dantas Araujo Santos**
-Tecnologia em Análise e Desenvolvimento de Sistemas (EAD)
-Projeto de Software – Experiência Prática 2
+Tecnologia em Análise e Desenvolvimento de Sistemas 
+Projeto de Software 
 
 ---
 
