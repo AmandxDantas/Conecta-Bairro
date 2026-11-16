@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Coverage for professionals/management/commands/seed_categories.py: 100%</title>
+    <link rel="icon" sizes="32x32" href="favicon_32_cb_c827f16f.png">
+    <link rel="stylesheet" href="style_cb_4667309f.css" type="text/css">
+    <script src="coverage_html_cb_54cfdca1.js" defer></script>
+</head>
+<body class="pyfile">
+<header>
+    <div class="content">
+        <h1>
+            <span class="text">Coverage for </span><b>professionals<span class="sep">/</span>management<span class="sep">/</span>commands<span class="sep">/</span>seed_categories.py</b>:
+            <span class="pc_cov">100%</span>
+        </h1>
+        <aside id="help_panel_wrapper">
+            <input id="help_panel_state" type="checkbox">
+            <label for="help_panel_state">
+                <img id="keyboard_icon" src="keybd_closed_cb_900cfef5.png" alt="Show/hide keyboard shortcuts">
+            </label>
+            <div id="help_panel">
+                <p class="legend">Shortcuts on this page</p>
+                <div class="keyhelp">
+                    <p>
+                        <kbd>r</kbd>
+                        <kbd>m</kbd>
+                        <kbd>x</kbd>
+                        <kbd>p</kbd>
+                        &nbsp; toggle line displays
+                    </p>
+                    <p>
+                        <kbd>j</kbd>
+                        <kbd>k</kbd>
+                        &nbsp; next/prev highlighted chunk
+                    </p>
+                    <p>
+                        <kbd>0</kbd> &nbsp; (zero) top of page
+                    </p>
+                    <p>
+                        <kbd>1</kbd> &nbsp; (one) first highlighted chunk
+                    </p>
+                    <p>
+                        <kbd>[</kbd>
+                        <kbd>]</kbd>
+                        &nbsp; prev/next file
+                    </p>
+                    <p>
+                        <kbd>u</kbd> &nbsp; up to the index
+                    </p>
+                    <p>
+                        <kbd>?</kbd> &nbsp; show/hide this help
+                    </p>
+                </div>
+            </div>
+        </aside>
+        <h2>
+            <span class="text">11 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">11<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">0<span class="text"> missing</span></button>
+            <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
+            <button type="button" class="par run show_par button_toggle_par" value="par" data-shortcut="p" title="Toggle lines partially run">0<span class="text"> partial</span></button>
+        </h2>
+        <p class="text">
+            <a id="prevFileLink" class="nav" href="z_8bf2fae6667adfd7___init___py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
+            <a id="nextFileLink" class="nav" href="z_9fa8358be8af91e3_models_py.html">&#xbb; next</a>
+            &nbsp; &nbsp; &nbsp;
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.17.3">coverage.py v7.17.3</a>,
+            created at 2026-11-16 19:53 +0000
+        </p>
+        <aside class="hidden">
+            <button type="button" class="button_next_chunk" data-shortcut="j"></button>
+            <button type="button" class="button_prev_chunk" data-shortcut="k"></button>
+            <button type="button" class="button_top_of_page" data-shortcut="0"></button>
+            <button type="button" class="button_first_chunk" data-shortcut="1"></button>
+            <button type="button" class="button_prev_file" data-shortcut="["></button>
+            <button type="button" class="button_next_file" data-shortcut="]"></button>
+            <button type="button" class="button_to_index" data-shortcut="u"></button>
+            <button type="button" class="button_show_hide_help" data-shortcut="?"></button>
+        </aside>
+    </div>
+</header>
+<main id="source">
+    <p class="run"><span class="n"><a id="t1" href="#t1">1</a></span><span class="t"><span class="key">from</span> <span class="nam">django</span><span class="op">.</span><span class="nam">core</span><span class="op">.</span><span class="nam">management</span><span class="op">.</span><span class="nam">base</span> <span class="key">import</span> <span class="nam">BaseCommand</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t2" href="#t2">2</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t3" href="#t3">3</a></span><span class="t"><span class="key">from</span> <span class="nam">professionals</span><span class="op">.</span><span class="nam">models</span> <span class="key">import</span> <span class="nam">Category</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t4" href="#t4">4</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t5" href="#t5">5</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t6" href="#t6">6</a></span><span class="t"><span class="nam">CATEGORIES</span> <span class="op">=</span> <span class="op">[</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t7" href="#t7">7</a></span><span class="t">    <span class="op">(</span><span class="str">&quot;Reformas e reparos&quot;</span><span class="op">,</span> <span class="str">&quot;reformas-e-reparos&quot;</span><span class="op">,</span> <span class="str">&quot;toolbox&quot;</span><span class="op">,</span> <span class="str">&quot;Eletricista, encanador, pintor e pequenos reparos.&quot;</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t8" href="#t8">8</a></span><span class="t">    <span class="op">(</span><span class="str">&quot;Limpeza&quot;</span><span class="op">,</span> <span class="str">&quot;limpeza&quot;</span><span class="op">,</span> <span class="str">&quot;broom&quot;</span><span class="op">,</span> <span class="str">&quot;Faxina residencial, limpeza p&#243;s-obra e organiza&#231;&#227;o.&quot;</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t9" href="#t9">9</a></span><span class="t">    <span class="op">(</span><span class="str">&quot;Beleza e bem-estar&quot;</span><span class="op">,</span> <span class="str">&quot;beleza-e-bem-estar&quot;</span><span class="op">,</span> <span class="str">&quot;sparkles&quot;</span><span class="op">,</span> <span class="str">&quot;Cabelo, maquiagem, massagem e cuidados pessoais.&quot;</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t10" href="#t10">10</a></span><span class="t">    <span class="op">(</span><span class="str">&quot;Aulas e cursos&quot;</span><span class="op">,</span> <span class="str">&quot;aulas-e-cursos&quot;</span><span class="op">,</span> <span class="str">&quot;book&quot;</span><span class="op">,</span> <span class="str">&quot;Refor&#231;o escolar, idiomas, m&#250;sica e outras aulas.&quot;</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t">    <span class="op">(</span><span class="str">&quot;Tecnologia&quot;</span><span class="op">,</span> <span class="str">&quot;tecnologia&quot;</span><span class="op">,</span> <span class="str">&quot;laptop&quot;</span><span class="op">,</span> <span class="str">&quot;Inform&#225;tica, suporte t&#233;cnico e instala&#231;&#227;o de redes.&quot;</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t">    <span class="op">(</span><span class="str">&quot;Transporte&quot;</span><span class="op">,</span> <span class="str">&quot;transporte&quot;</span><span class="op">,</span> <span class="str">&quot;car&quot;</span><span class="op">,</span> <span class="str">&quot;Fretes, mudan&#231;as e transporte local.&quot;</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t">    <span class="op">(</span><span class="str">&quot;Jardinagem&quot;</span><span class="op">,</span> <span class="str">&quot;jardinagem&quot;</span><span class="op">,</span> <span class="str">&quot;leaf&quot;</span><span class="op">,</span> <span class="str">&quot;Jardins, podas, plantas e manuten&#231;&#227;o de &#225;reas verdes.&quot;</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t">    <span class="op">(</span><span class="str">&quot;Pets&quot;</span><span class="op">,</span> <span class="str">&quot;pets&quot;</span><span class="op">,</span> <span class="str">&quot;paw&quot;</span><span class="op">,</span> <span class="str">&quot;Banho, passeio, cuidados e servi&#231;os para animais.&quot;</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t15" href="#t15">15</a></span><span class="t">    <span class="op">(</span><span class="str">&quot;Alimenta&#231;&#227;o&quot;</span><span class="op">,</span> <span class="str">&quot;alimentacao&quot;</span><span class="op">,</span> <span class="str">&quot;utensils&quot;</span><span class="op">,</span> <span class="str">&quot;Comida caseira, bolos e servi&#231;os de cozinha.&quot;</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t16" href="#t16">16</a></span><span class="t">    <span class="op">(</span><span class="str">&quot;Eventos&quot;</span><span class="op">,</span> <span class="str">&quot;eventos&quot;</span><span class="op">,</span> <span class="str">&quot;party&quot;</span><span class="op">,</span> <span class="str">&quot;Fotografia, decora&#231;&#227;o e apoio para eventos.&quot;</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t17" href="#t17">17</a></span><span class="t">    <span class="op">(</span><span class="str">&quot;Servi&#231;os dom&#233;sticos&quot;</span><span class="op">,</span> <span class="str">&quot;servicos-domesticos&quot;</span><span class="op">,</span> <span class="str">&quot;home&quot;</span><span class="op">,</span> <span class="str">&quot;Apoio e manuten&#231;&#227;o para o dia a dia da casa.&quot;</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t18" href="#t18">18</a></span><span class="t">    <span class="op">(</span><span class="str">&quot;Outros servi&#231;os&quot;</span><span class="op">,</span> <span class="str">&quot;outros-servicos&quot;</span><span class="op">,</span> <span class="str">&quot;grid&quot;</span><span class="op">,</span> <span class="str">&quot;Outros servi&#231;os oferecidos na comunidade.&quot;</span><span class="op">)</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t19" href="#t19">19</a></span><span class="t"><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t20" href="#t20">20</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t21" href="#t21">21</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t22" href="#t22">22</a></span><span class="t"><span class="key">class</span> <span class="nam">Command</span><span class="op">(</span><span class="nam">BaseCommand</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t23" href="#t23">23</a></span><span class="t">    <span class="nam">help</span> <span class="op">=</span> <span class="str">&quot;Cria ou atualiza as categorias padr&#227;o do Conecta Bairro.&quot;</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t24" href="#t24">24</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t25" href="#t25">25</a></span><span class="t">    <span class="key">def</span> <span class="nam">handle</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="op">*</span><span class="nam">args</span><span class="op">,</span> <span class="op">**</span><span class="nam">options</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t26" href="#t26">26</a></span><span class="t">        <span class="nam">created_count</span> <span class="op">=</span> <span class="num">0</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t27" href="#t27">27</a></span><span class="t">        <span class="key">for</span> <span class="nam">name</span><span class="op">,</span> <span class="nam">slug</span><span class="op">,</span> <span class="nam">icon</span><span class="op">,</span> <span class="nam">description</span> <span class="key">in</span> <span class="nam">CATEGORIES</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t28" href="#t28">28</a></span><span class="t">            <span class="nam">_category</span><span class="op">,</span> <span class="nam">created</span> <span class="op">=</span> <span class="nam">Category</span><span class="op">.</span><span class="nam">objects</span><span class="op">.</span><span class="nam">update_or_create</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t29" href="#t29">29</a></span><span class="t">                <span class="nam">slug</span><span class="op">=</span><span class="nam">slug</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t30" href="#t30">30</a></span><span class="t">                <span class="nam">defaults</span><span class="op">=</span><span class="op">{</span><span class="str">&quot;name&quot;</span><span class="op">:</span> <span class="nam">name</span><span class="op">,</span> <span class="str">&quot;icon&quot;</span><span class="op">:</span> <span class="nam">icon</span><span class="op">,</span> <span class="str">&quot;description&quot;</span><span class="op">:</span> <span class="nam">description</span><span class="op">,</span> <span class="str">&quot;is_active&quot;</span><span class="op">:</span> <span class="key">True</span><span class="op">}</span><span class="op">,</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t31" href="#t31">31</a></span><span class="t">            <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t32" href="#t32">32</a></span><span class="t">            <span class="nam">created_count</span> <span class="op">+=</span> <span class="nam">int</span><span class="op">(</span><span class="nam">created</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">stdout</span><span class="op">.</span><span class="nam">write</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t">            <span class="nam">self</span><span class="op">.</span><span class="nam">style</span><span class="op">.</span><span class="nam">SUCCESS</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t">                <span class="fst">f&quot;</span><span class="fst">Categorias prontas: </span><span class="op">{</span><span class="nam">len</span><span class="op">(</span><span class="nam">CATEGORIES</span><span class="op">)</span><span class="op">}</span><span class="fst"> no total, </span><span class="op">{</span><span class="nam">created_count</span><span class="op">}</span><span class="fst"> criadas agora.</span><span class="fst">&quot;</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t">            <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t">        <span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+</main>
+<footer>
+    <div class="content">
+        <p>
+            <a class="nav" href="z_8bf2fae6667adfd7___init___py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
+            <a class="nav" href="z_9fa8358be8af91e3_models_py.html">&#xbb; next</a>
+            &nbsp; &nbsp; &nbsp;
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.17.3">coverage.py v7.17.3</a>,
+            created at 2026-11-16 19:53 +0000
+        </p>
+    </div>
+</footer>
+</body>
+</html>

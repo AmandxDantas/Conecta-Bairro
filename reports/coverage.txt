@@ -1,0 +1,24 @@
+Name                                                   Stmts   Miss Branch BrPart  Cover   Missing
+--------------------------------------------------------------------------------------------------
+accounts/__init__.py                                       0      0      0      0   100%
+accounts/forms.py                                         27      2      6      2    88%   26, 32
+accounts/tests.py                                         27      0      2      0   100%
+accounts/urls.py                                           4      0      0      0   100%
+accounts/views.py                                         31      1      6      1    95%   31
+config/__init__.py                                         0      0      0      0   100%
+config/asgi.py                                             4      4      0      0     0%   1-6
+config/settings.py                                        47      5      6      3    85%   11, 16->19, 107-110
+config/urls.py                                            10      0      0      0   100%
+config/wsgi.py                                             4      4      0      0     0%   1-6
+professionals/__init__.py                                  0      0      0      0   100%
+professionals/admin.py                                    23      0      0      0   100%
+professionals/forms.py                                    49      2     14      3    92%   57->exit, 72, 74
+professionals/management/__init__.py                       0      0      0      0   100%
+professionals/management/commands/__init__.py              0      0      0      0   100%
+professionals/management/commands/seed_categories.py      11      0      2      0   100%
+professionals/models.py                                   66      3      4      1    94%   32, 73, 115
+professionals/tests.py                                   154      0      4      0   100%
+professionals/urls.py                                      4      0      0      0   100%
+professionals/views.py                                    75      3     16      2    95%   81-82, 112
+--------------------------------------------------------------------------------------------------
+TOTAL                                                    536     24     60     12    94%
