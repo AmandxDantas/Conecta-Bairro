@@ -1,3 +1,4 @@
+
 import re
 
 from django import forms
@@ -24,18 +25,31 @@ class ProfessionalForm(forms.ModelForm):
             "city",
             "service_description",
         ]
+
         widgets = {
-            "full_name": forms.TextInput(attrs={"autocomplete": "name"}),
-            "whatsapp": forms.TelInput(
-                attrs={"autocomplete": "tel", "inputmode": "tel", "placeholder": "(11) 99999-9999"}
-            ),
+            "full_name": forms.TextInput(attrs={
+                "autocomplete": "name",
+            }),
+            "whatsapp": forms.TextInput(attrs={
+                "type": "tel",
+                "autocomplete": "tel",
+                "inputmode": "tel",
+                "placeholder": "(11) 99999-9999",
+            }),
             "category": forms.Select(),
-            "neighborhood": forms.TextInput(attrs={"autocomplete": "address-level3"}),
-            "city": forms.TextInput(attrs={"autocomplete": "address-level2"}),
-            "service_description": forms.Textarea(
-                attrs={"rows": 5, "maxlength": 1200, "placeholder": "Conte o que você faz, sua experiência e como atende."}
-            ),
+            "neighborhood": forms.TextInput(attrs={
+                "autocomplete": "address-level3",
+            }),
+            "city": forms.TextInput(attrs={
+                "autocomplete": "address-level2",
+            }),
+            "service_description": forms.Textarea(attrs={
+                "rows": 5,
+                "maxlength": 1200,
+                "placeholder": "Conte o que você faz, sua experiência e como atende.",
+            }),
         }
+
         labels = {
             "full_name": "Nome completo",
             "whatsapp": "Número de WhatsApp",
@@ -44,6 +58,7 @@ class ProfessionalForm(forms.ModelForm):
             "city": "Cidade",
             "service_description": "Descrição dos serviços oferecidos",
         }
+
         help_texts = {
             "whatsapp": "Inclua DDD. O sistema salva o número em formato internacional.",
             "service_description": "Escreva uma apresentação clara, com até 1.200 caracteres.",
@@ -52,6 +67,7 @@ class ProfessionalForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["category"].queryset = Category.objects.filter(is_active=True)
+
         if self.instance.pk:
             primary_service = self.instance.services.order_by("pk").first()
             if primary_service:
@@ -66,12 +82,16 @@ class ProfessionalForm(forms.ModelForm):
     def clean_whatsapp(self):
         raw = self.cleaned_data["whatsapp"]
         digits = re.sub(r"\D", "", raw)
+
         if len(digits) not in {10, 11, 12, 13}:
             raise forms.ValidationError("Informe um número válido com DDD (10 ou 11 dígitos).")
+
         if len(digits) in {12, 13} and not digits.startswith("55"):
             raise forms.ValidationError("Para números internacionais, informe o código 55 do Brasil.")
+
         if digits.startswith("55") and len(digits) not in {12, 13}:
             raise forms.ValidationError("Após o código 55, informe o DDD e o telefone.")
+
         return f"+{digits if digits.startswith('55') else '55' + digits}"
 
     def clean_neighborhood(self):
@@ -92,19 +112,26 @@ class ProfessionalSearchForm(forms.Form):
         label="Que serviço você procura?",
         required=False,
         max_length=100,
-        widget=forms.SearchInput(attrs={"placeholder": "Ex.: eletricista, faxina, aulas", "autocomplete": "off"}),
+        widget=forms.SearchInput(attrs={
+            "placeholder": "Ex.: eletricista, faxina, aulas",
+            "autocomplete": "off",
+        }),
     )
+
     category = forms.ModelChoiceField(
         label="Categoria",
         queryset=Category.objects.none(),
         required=False,
         empty_label="Todas as categorias",
     )
+
     region = forms.CharField(
         label="Bairro ou cidade",
         required=False,
         max_length=100,
-        widget=forms.TextInput(attrs={"placeholder": "Ex.: Centro, Campinas"}),
+        widget=forms.TextInput(attrs={
+            "placeholder": "Ex.: Centro, Campinas",
+        }),
     )
 
     def __init__(self, *args, **kwargs):
